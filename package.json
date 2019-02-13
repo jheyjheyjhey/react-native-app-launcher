@@ -1,17 +1,16 @@
 {
   "name": "react-native-app-launcher",
   "version": "0.0.1",
-  "author": "Christoph Michel http://cmichel.io",
   "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrToph/react-native-app-launcher.git"
+    "url": "https://github.com/jheyjheyjhey/react-native-app-launcher.git"
   },
   "bugs": {
-    "url": "https://github.com/MrToph/react-native-app-launcher/issues"
+    "url": "https://github.com/jheyjheyjhey/react-native-app-launcher/issues"
   },
-  "homepage": "https://github.com/MrToph/react-native-app-launcher",
+  "homepage": "https://github.com/jheyjheyjhey/react-native-app-launcher",
   "keywords": [
     "react-native",
     "android",
