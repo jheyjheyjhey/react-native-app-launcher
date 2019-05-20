@@ -8,7 +8,7 @@ export default class AppLauncher {
      * UNIX timestamp `timestamp`. If parameter `inexact` is set to true, the battery-saving version of
      * AlarmManager is used that can fire at inexact times. Default value for `inexact` is false.
      */
-    static setAlarm(id, timestamp, inexact, otherData){
+    static setAlarm(id, timestamp, inexact){
         if(!(typeof id === 'string' || typeof id === 'number'))
             throw new Error('AppLauncher.setAlarm: `id` must be a number or a string.')
         if(typeof timestamp !== 'number')
@@ -16,7 +16,7 @@ export default class AppLauncher {
         id = id.toString()  // parse to string
         timestamp = Math.trunc(timestamp)   // parse to int
         inexact = !!inexact // parse to bool
-        NativeModules.AppLauncher.setAlarm(id, timestamp, inexact, otherData)
+        NativeModules.AppLauncher.setAlarm(id, timestamp, inexact)
     }
 
     /**

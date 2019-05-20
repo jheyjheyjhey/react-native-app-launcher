@@ -39,8 +39,7 @@ public class LauncherModule extends ReactContextBaseJavaModule {
    * @param inexact Determines if the alarm should be inexact to save on battery power.
      */
   @ReactMethod
-  public final void setAlarm(String id, double timestamp, boolean inexact, ReadableMap otherData) {
-    Bundle bundle = Arguments.toBundle(otherData)
+  public final void setAlarm(String id, double timestamp, boolean inexact) {
     PendingIntent pendingIntent = createPendingIntent(id);
     long timestampLong = (long)timestamp; // React Bridge doesn't understand longs
     // get the alarm manager, and schedule an alarm that calls the receiver
@@ -58,7 +57,6 @@ public class LauncherModule extends ReactContextBaseJavaModule {
     } else {
       getAlarmManager().set(AlarmManager.RTC_WAKEUP, timestampLong, pendingIntent);
     }
-    pendingIntent.putExtras(bundle);
     Context context = getReactApplicationContext();
   }
 
